@@ -1,0 +1,14 @@
+D:\VisualStudio Projects\Visual Basic\SQLTutorial\SQLTutorial\bin\Debug\SQLTutorial.exe.config
+D:\VisualStudio Projects\Visual Basic\SQLTutorial\SQLTutorial\bin\Debug\SQLTutorial.exe
+D:\VisualStudio Projects\Visual Basic\SQLTutorial\SQLTutorial\bin\Debug\SQLTutorial.pdb
+D:\VisualStudio Projects\Visual Basic\SQLTutorial\SQLTutorial\bin\Debug\SQLTutorial.xml
+D:\VisualStudio Projects\Visual Basic\SQLTutorial\SQLTutorial\obj\Debug\SQLTutorial.vbprojAssemblyReference.cache
+D:\VisualStudio Projects\Visual Basic\SQLTutorial\SQLTutorial\obj\Debug\SQLTutorial.Form1.resources
+D:\VisualStudio Projects\Visual Basic\SQLTutorial\SQLTutorial\obj\Debug\SQLTutorial.Inventory.resources
+D:\VisualStudio Projects\Visual Basic\SQLTutorial\SQLTutorial\obj\Debug\SQLTutorial.Resources.resources
+D:\VisualStudio Projects\Visual Basic\SQLTutorial\SQLTutorial\obj\Debug\SQLTutorial.vbproj.GenerateResource.cache
+D:\VisualStudio Projects\Visual Basic\SQLTutorial\SQLTutorial\obj\Debug\SQLTutorial.vbproj.CoreCompileInputs.cache
+D:\VisualStudio Projects\Visual Basic\SQLTutorial\SQLTutorial\obj\Debug\SQLTutorial.exe
+D:\VisualStudio Projects\Visual Basic\SQLTutorial\SQLTutorial\obj\Debug\SQLTutorial.xml
+D:\VisualStudio Projects\Visual Basic\SQLTutorial\SQLTutorial\obj\Debug\SQLTutorial.pdb
+D:\VisualStudio Projects\Visual Basic\SQLTutorial\SQLTutorial\obj\Debug\SQLTutorial.NewUser.resources
