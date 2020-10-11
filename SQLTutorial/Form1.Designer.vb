@@ -24,7 +24,7 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.msMain = New System.Windows.Forms.MenuStrip()
         Me.miInventory = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ManageUSersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.msiManageUsers = New System.Windows.Forms.ToolStripMenuItem()
         Me.msiNewUser = New System.Windows.Forms.ToolStripMenuItem()
         Me.msiDeleteUser = New System.Windows.Forms.ToolStripMenuItem()
         Me.msiEditUser = New System.Windows.Forms.ToolStripMenuItem()
@@ -34,7 +34,7 @@ Partial Class Form1
         'msMain
         '
         Me.msMain.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.msMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miInventory, Me.ManageUSersToolStripMenuItem})
+        Me.msMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miInventory, Me.msiManageUsers})
         Me.msMain.Location = New System.Drawing.Point(0, 0)
         Me.msMain.Name = "msMain"
         Me.msMain.Size = New System.Drawing.Size(800, 28)
@@ -47,12 +47,12 @@ Partial Class Form1
         Me.miInventory.Size = New System.Drawing.Size(84, 24)
         Me.miInventory.Text = "Inventory"
         '
-        'ManageUSersToolStripMenuItem
+        'msiManageUsers
         '
-        Me.ManageUSersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.msiNewUser, Me.msiDeleteUser, Me.msiEditUser})
-        Me.ManageUSersToolStripMenuItem.Name = "ManageUSersToolStripMenuItem"
-        Me.ManageUSersToolStripMenuItem.Size = New System.Drawing.Size(116, 24)
-        Me.ManageUSersToolStripMenuItem.Text = "Manage Users"
+        Me.msiManageUsers.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.msiNewUser, Me.msiDeleteUser, Me.msiEditUser})
+        Me.msiManageUsers.Name = "msiManageUsers"
+        Me.msiManageUsers.Size = New System.Drawing.Size(116, 24)
+        Me.msiManageUsers.Text = "Manage Users"
         '
         'msiNewUser
         '
@@ -91,7 +91,7 @@ Partial Class Form1
 
     Friend WithEvents msMain As MenuStrip
     Friend WithEvents miInventory As ToolStripMenuItem
-    Friend WithEvents ManageUSersToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents msiManageUsers As ToolStripMenuItem
     Friend WithEvents msiNewUser As ToolStripMenuItem
     Friend WithEvents msiDeleteUser As ToolStripMenuItem
     Friend WithEvents msiEditUser As ToolStripMenuItem

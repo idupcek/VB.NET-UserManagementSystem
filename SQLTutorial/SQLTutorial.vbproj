@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EditUser.Designer.vb">
+      <DependentUpon>EditUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     <Compile Include="SQLControl.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="EditUser.resx">
+      <DependentUpon>EditUser.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
