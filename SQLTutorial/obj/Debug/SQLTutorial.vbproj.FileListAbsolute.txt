@@ -13,3 +13,4 @@ D:\VisualStudio Projects\Visual Basic\SQLTutorial\SQLTutorial\obj\Debug\SQLTutor
 D:\VisualStudio Projects\Visual Basic\SQLTutorial\SQLTutorial\obj\Debug\SQLTutorial.pdb
 D:\VisualStudio Projects\Visual Basic\SQLTutorial\SQLTutorial\obj\Debug\SQLTutorial.NewUser.resources
 D:\VisualStudio Projects\Visual Basic\SQLTutorial\SQLTutorial\obj\Debug\SQLTutorial.EditUser.resources
+D:\VisualStudio Projects\Visual Basic\SQLTutorial\SQLTutorial\obj\Debug\SQLTutorial.DeleteUser.resources
