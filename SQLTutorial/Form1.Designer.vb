@@ -28,13 +28,14 @@ Partial Class Form1
         Me.msiNewUser = New System.Windows.Forms.ToolStripMenuItem()
         Me.msiDeleteUser = New System.Windows.Forms.ToolStripMenuItem()
         Me.msiEditUser = New System.Windows.Forms.ToolStripMenuItem()
+        Me.miLogin = New System.Windows.Forms.ToolStripMenuItem()
         Me.msMain.SuspendLayout()
         Me.SuspendLayout()
         '
         'msMain
         '
         Me.msMain.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.msMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miInventory, Me.msiManageUsers})
+        Me.msMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miInventory, Me.msiManageUsers, Me.miLogin})
         Me.msMain.Location = New System.Drawing.Point(0, 0)
         Me.msMain.Name = "msMain"
         Me.msMain.Size = New System.Drawing.Size(800, 28)
@@ -72,6 +73,12 @@ Partial Class Form1
         Me.msiEditUser.Size = New System.Drawing.Size(224, 26)
         Me.msiEditUser.Text = "Edit User"
         '
+        'miLogin
+        '
+        Me.miLogin.Name = "miLogin"
+        Me.miLogin.Size = New System.Drawing.Size(60, 24)
+        Me.miLogin.Text = "Login"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -95,4 +102,5 @@ Partial Class Form1
     Friend WithEvents msiNewUser As ToolStripMenuItem
     Friend WithEvents msiDeleteUser As ToolStripMenuItem
     Friend WithEvents msiEditUser As ToolStripMenuItem
+    Friend WithEvents miLogin As ToolStripMenuItem
 End Class

@@ -19,6 +19,12 @@ Public Class SQLControl
     'store any error messages along the way
     Public Exception As String
 
+    'for 1.login
+    Public DBDS As DataSet
+
+    'for 2.prevent sql injection
+    Public SQLParams As New List(Of SqlParameter)
+
     Public Sub New()
     End Sub
 
@@ -88,5 +94,90 @@ Public Class SQLControl
         If Report = True Then MsgBox(Exception, MsgBoxStyle.Critical, "Exception")
         Return True
     End Function
+
+
+    '-----------
+
+    'login form f - try to replace with just one function like above
+    Public Function HasConnection() As Boolean
+        Try
+            DBCon.Open()
+
+            DBCon.Close()
+            Return True
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        Return False
+    End Function
+
+    Public Sub RunQuery(Query As String)
+        Try
+            DBCon.Open()
+
+            'create command
+            DBCmd = New SqlCommand(Query, DBCon)
+
+            'executing command and fill dataset
+            DBDA = New SqlDataAdapter(DBCmd)
+            DBDS = New DataSet
+            DBDA.Fill(DBDS)
+
+            DBCon.Close()
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+
+            'make sure connection is closed
+            If DBCon.State = ConnectionState.Open Then
+                DBCon.Close()
+            End If
+        End Try
+    End Sub
+
+    Public Sub ParamQuery(Query As String, Optional Collate As Collation = Collation.None)
+        Try
+            DBCon.Open()
+            If Collate = Collation.CaseSensitive Then Query = Query & " COLLATE SQL_Latin1_General_CP1_CS_AS "
+
+            DBCmd = New SqlCommand(Query, DBCon)
+
+            For Each p As SqlParameter In SQLParams
+                MsgBox(p.ParameterName & ":" & p.Value) 'for debugging
+
+                DBCmd.Parameters.Add(p)
+                DBCmd.Parameters(p.ParameterName).Value = p.Value
+            Next
+
+            'fill dataset
+            DBDA = New SqlDataAdapter(DBCmd)
+            DBDS = New DataSet
+            DBDA.Fill(DBDS)
+
+            MsgBox(Query & vbCrLf & DBDS.Tables(0).Rows(0).Item(0), MsgBoxStyle.OkOnly, "Success!")
+
+            DBCon.Close()
+        Catch ex As Exception
+            If DBCon.State = ConnectionState.Open Then DBCon.Close()
+            MsgBox("Query failed: " & ex.Message)
+            MsgBox(Query)
+        End Try
+
+        FlushParams()
+    End Sub
+
+    Public Sub AddParam(Name As String, Value As Object, Optional DataType As DbType = DbType.String)
+        Dim newParam As New SqlParameter With {.ParameterName = Name, .Value = Value, .DbType = DataType}
+        SQLParams.Add(newParam)
+    End Sub
+
+    Public Sub FlushParams()
+        SQLParams.Clear()
+    End Sub
+
+    Public Enum Collation
+        None
+        CaseSensitive
+    End Enum
 
 End Class

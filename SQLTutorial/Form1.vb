@@ -14,4 +14,8 @@
     Private Sub msiDeleteUser_Click(sender As Object, e As EventArgs) Handles msiDeleteUser.Click
         DeleteUser.Show()
     End Sub
+
+    Private Sub miLogin_Click(sender As Object, e As EventArgs) Handles miLogin.Click
+        UserLogin.Show()
+    End Sub
 End Class
